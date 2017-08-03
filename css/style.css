@@ -1,0 +1,25 @@
+h2 {
+	font-size: 4em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
+table, th {
+	text-align: center;
+}
+
+.jumbotron {
+	text-align: center;
+	background: #3e3890;
+	color: white;
+}
+
+.panel-body, .btn {
+	background: #3e3890;
+	color: white;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
