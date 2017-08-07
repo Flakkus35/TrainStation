@@ -45,8 +45,14 @@ $('.btn').on('click', function() {
 			arrivFB: arriv,
 			minAwayFB: minAway
 		})
-	} else {alert('Please Enter All Required Fields');}
+	} else {
+		$('.modal')[0].style.display = "block";
+	}
 });
+
+$(document).on('click', '.close', function() {
+	$('.modal')[0].style.display = 'none';
+})
 
 // Call database on child added and init
 database.ref().on("child_added", function(childSnapshot) {
@@ -78,5 +84,5 @@ function calcTime(freq, startTime) {
 	// Adds the remainder to current time to find arrival time
 	var nextTrain = moment().add(minAway, "minutes");
 	// Display arrival time in correct format and set to global var
-	arriv = moment(nextTrain).format("HH:mm A");
+	arriv = moment(nextTrain).format("h:mm A");
 }
